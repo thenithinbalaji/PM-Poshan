@@ -32,9 +32,17 @@ def reg_student():
 def upload_data():
     if request.method == 'POST':
         print(request.form)
-        return render_template('upload_menu_success.html')
+        return render_template('upload_hdata_success.html')
     else:
         return render_template('upload_hdata.html')
+
+@app.route('/upload_attendance', methods = ['POST', 'GET'])
+def upload_attendance():
+    if request.method == 'POST':
+        print(request.form)
+        return render_template('upload_attendance_success.html')
+    else:
+        return render_template('upload_attendance.html')
 
 if __name__ == "__main__":
     app.run(debug = True)
