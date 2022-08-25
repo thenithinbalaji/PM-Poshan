@@ -6,8 +6,25 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 7.8fr 1.3fr;
+}
+
+.search-result {
+
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.search-result a {
+    width: 100%;
+    height: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
@@ -38,7 +55,10 @@ body {
     caret-color: lightgrey;
     color: grey;
     border-radius: 4px;
+    color: grey;
+
 }
+
 .school-search:focus {
     outline: none;
 }
@@ -51,7 +71,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: .5rem 1.2rem;
-    color: rgba(70,70,70,1);
+    color: rgba(70, 70, 70, 1);
     border-radius: 10px;
     box-shadow: 0 0 10px 1px lightgrey;
 }
@@ -66,12 +86,11 @@ body {
     font-size: .8rem;
 }
 
-.num{
+.num {
     font-size: 1.4rem;
 }
 
-#underweight, #overweight {
+#underweight,
+#overweight {
     background-color: #ffbcb8;
 }
-
-
