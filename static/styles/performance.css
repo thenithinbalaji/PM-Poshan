@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 7.8fr 1.3fr;
+}
+
+.container {
+    height: 100%;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+}
+
+.school-search {
+    width: 50%;
+    margin: 1.5rem auto;
+    height: 2rem;
+    border: none;
+    font-size: 1.2rem;
+    line-height: 100%;
+    box-shadow: 0 0 10px 1px lightgray;
+    padding: .1rem .7rem;
+    caret-color: lightgrey;
+    color: grey;
+    border-radius: 4px;
+    color: ;
+
+}
+.school-search:focus {
+    outline: none;
+}
+
+.card {
+    background-color: lightblue;
+    width: 23%;
+    height: 4rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 1.2rem;
+    color: rgba(70,70,70,1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px lightgrey;
+}
+
+.card span {
+    margin: .2rem;
+    width: 100%;
+    text-align: right;
+}
+
+.title {
+    font-size: .8rem;
+}
+
+.num{
+    font-size: 1.4rem;
+}
+
+#underweight, #overweight {
+    background-color: #ffbcb8;
+}
+
+

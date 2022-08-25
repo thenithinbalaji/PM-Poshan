@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <script src='https://cdn.plot.ly/plotly-2.14.0.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    {% block files %}
+    {% endblock %}
+</head>
+<body>
+    <div class="navbar">
+        <div>
+            <img src="{{ url_for('static', filename='assets/pmposhan.png') }}" height="45rem">
+            <img src="{{ url_for('static', filename='assets/govlion.png') }}" height="45rem">
+            <img src="{{ url_for('static', filename='assets/digitalindia.png') }}" height="45rem">
+        </div>
+
+        <div>
+            <button class="loginbtn">Logout</button>
+        </div>
+    </div>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div class="dash_footer">
+    <p>Designed and Developed by Random Variables. Website content is provided by the Department of Elementary Education
+        (Phone: XXXXX-XXXXX Email : xxxxxxxxxxxx). The content on site is informative and neither the Department nor the NIC
+        is responsible for any in-advertent errors. <br> © 2022 National Informatics Centre</p>
+    </div>
+</body>
+</html>

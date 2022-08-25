@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block files %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/performance.css') }}">
+    <script defer src="{{ url_for('static', filename='scripts/graph.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main1.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="content">
+        <input type="text" name="school" class="school-search" placeholder="Search School">
+        <div class="card" id="total">
+            <span class="num">1239</span>
+            <span class="title">Total Students</span>
+        </div>
+        <div class="card" id="underweight">
+            <span class="num">234</span>
+            <span class="title">Underweight Students</span>
+        </div>
+        <div class="card" id="overweight">
+            <span class="num">98</span>
+            <span class="title">Overweight Students</span>
+        </div>
+    </div>
+
+    <div id="graph">
+    </div>
+
+{% endblock %}

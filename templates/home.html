@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PM Poshan</title>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/main.css') }}">
-
+    <script src="{{url_for('static', filename='scripts/home.js')}}" defer></script>
 </head> 
 <body>
     <div class = "navbar">
@@ -15,32 +15,40 @@
             <img src = "{{ url_for('static', filename='assets/govlion.png') }}" height="45rem">
             <img src = "{{ url_for('static', filename='assets/digitalindia.png') }}" height="45rem">
         </div>
-
-        <div>
-            <button class = "loginbtn" onclick="location.href='/'">Logout</button>
-        </div>
     </div>
 
-    <div class = "main">
     <marquee scrollamount="7">Government School MGR Nagar, Chennai has been selected as the best school based on constant improvement in MDM and attendance. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; The plate image can be only uploaded from our android application. &emsp;&emsp;&emsp;&emsp;&emsp; Government School MGR Nagar, Chennai has been selected as the best school based on constant improvement in MDM and attendance. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; The plate image can be only uploaded from our android application.
     </marquee>
 
-    <div class="school_dash_main">
-        <div>
-            <button class="blue_button" onclick="location.href='/upload_menu'">Update Weekly Menu</button><br>
-            <button class="blue_button" onclick="location.href='/upload_hdata'">Update Health Data</button><br>
-            <button class="blue_button">Download Report</button>
-        </div>
+    <img src = "{{ url_for('static', filename='assets/thumb.jpg') }}" width="100%">
 
-        <div class="schooldetails">
-            <label style="font-size:2rem">Contact Number: </label>
-            <input type = "number" value="9848283023"><br><br>
-
-            <label style="font-size:2rem">School Incharge:</label>
-            <input type = "text" value="Mr.Sharma">
-        </div>
+    <div class = "dashbar1">
+        <h1 style="color: rgb(255, 123, 0);">Pradhan Mantri Poshan Shakti Nirman (PM POSHAN)</h1>
     </div>
 
+    <div class = "dashbar2">
+        <div class = "loginfield">
+            <h3>Sign in to your account</h3>
+            <br>
+        
+            <select style="width: 12rem;" id="dashselect">
+                <option value="0">School</option>
+                <option value="1">Health Officer</option>
+            </select>
+            
+            <br><br>
+            <label>Email ID:</label>
+            <input type = "email" placeholder="abc@gmail.com"><br><br>
+
+            <label>Password:</label>
+            <input type = "password" placeholder="password">
+
+            <br><br>
+            <button class="loginbtn" id="loginbtn">Login</button>
+            <button class="loginbtn">Forgot Password</button>
+        </div>
+    </div>  
+    
     <div class="dash_footer">
         <p>Designed and Developed by Random Variables. Website content is provided by the Department of Elementary Education (Phone: XXXXX-XXXXX Email : xxxxxxxxxxxx). The content on site is informative and neither the Department nor the NIC is responsible for any in-advertent errors. <br> © 2022 National Informatics Centre</p>
     </div>

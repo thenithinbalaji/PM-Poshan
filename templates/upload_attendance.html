@@ -18,6 +18,17 @@
         <div>
             <button class = "loginbtn">Logout</button>
         </div>
-    </div>  
+    </div> 
+    <h1>Upload Attendance</h1>
+    <form action="/upload_attendance" method="post" target="_self">
+        <label for="adminno">Admission Number:</label>
+        <input type = "number" id = "adminno" name = "adminno" required min="1000">
+
+        
+
+        <br><br>
+        <button type="reset">Reset All Fields</button>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
