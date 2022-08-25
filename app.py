@@ -1,9 +1,9 @@
 from flask import Flask, render_template, send_file, request
-
 app = Flask(__name__)
+
 @app.route('/')
 def home():
-    return render_template("school/home.html")
+    return render_template("home.html")
 
 @app.route('/get_graph_data')
 def get_graph_data():
