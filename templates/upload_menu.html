@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Poshan</title>
+    <script src="{{url_for('static', filename='scripts/upload_menu.js')}}" defer></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/main.css') }}">
+
+</head> 
+<body>
+    <div class = "navbar">
+    <div>
+      <img src = "{{ url_for('static', filename='assets/pmposhan.png') }}" height="45rem">
+      <img src = "{{ url_for('static', filename='assets/govlion.png') }}" height="45rem">
+      <img src = "{{ url_for('static', filename='assets/digitalindia.png') }}" height="45rem">
+    </div>
+
+        <div>
+            <button class = "loginbtn">Logout</button>
+        </div>
+    </div>
+    <h1>What's the menu today?</h1>
+    <p id = "current_date"></p>
+    
+    <form action="/upload_menu" target="_self" method="POST">
+    <label>Menu Items</label>
+    <div id="menucontainer">
+        <section id="mainsection">
+          <table>
+            <thead>
+              <tr>
+                <th>Main Dish</th>
+                <th>Side Dish</th>
+                <th>Extras</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <select id = "maindish" name = "maindish" required>
+                    <option value="Rice">Rice</option>
+                    <option value="Chappathi">Chappathi</option>
+                  </select>
+                </td>
+                <td>
+                  <select id = "sidedish" name = "sidedish">
+                    <option value="None">None</option>
+                    <option value="Dal">Dal</option>
+                    <option value="Sambhar">Sambhar</option>
+                    <option value="Rasam">Rasam</option>
+                  </select>
+                </td>
+                <td>
+                  <select id = "extras" name = "extras">
+                    <option value="None">None</option>
+                    <option value="Egg">Egg</option>
+                    <option value="Meat">Meat</option>
+                    <optgroup label="Fruits">
+                      <option value="Apple">Apple</option>
+                      <option value="Banana">Banana</option>
+                      <option value="Orange">Orange</option>
+                    </optgroup>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      
+        </section>
+    </div>
+    <button type = "button" id="additembutton">Add New Item</button>
+    <button type = "button" id="removeitembutton">Remove Last Item</button>
+    <br><br>
+    <label for = "numberofstudents">Number of Students availed the meal:</label>
+    <input id = "noofstudents" type="number" name = "numberofstudents" min="1" required placeholder="1">
+    
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+
+</body>
+</html>

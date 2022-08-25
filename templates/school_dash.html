@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Poshan</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/main.css') }}">
+
+</head> 
+<body>
+    <div class = "navbar">
+        <div>
+            <img src = "{{ url_for('static', filename='assets/pmposhan.png') }}" height="45rem">
+            <img src = "{{ url_for('static', filename='assets/govlion.png') }}" height="45rem">
+            <img src = "{{ url_for('static', filename='assets/digitalindia.png') }}" height="45rem">
+        </div>
+
+        <div>
+            <button class = "loginbtn">Logout</button>
+        </div>
+    </div>
+
+    <div class = "main">
+    <marquee scrollamount="7">Government School MGR Nagar, Chennai has been selected as the best school based on constant improvement in MDM and attendance. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; The plate image can be only uploaded from our android application. &emsp;&emsp;&emsp;&emsp;&emsp; Government School MGR Nagar, Chennai has been selected as the best school based on constant improvement in MDM and attendance. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; The plate image can be only uploaded from our android application.
+    </marquee>
+
+    <img src = "{{ url_for('static', filename='assets/thumb.jpg') }}" width="100%">
+
+    <div class = "dashbar1">
+        <h1 style="color: rgb(255, 123, 0);">Pradhan Mantri Poshan Shakti Nirman (PM POSHAN)</h1>
+    </div>
+
+    <div class = "dashbar2">
+        <button class="blue_button" onclick="location.href='/upload_menu'">🔵 Upload Today's Menu</button>
+        <button class="blue_button" onclick="location.href='/upload_hdata'">📘 Update Health Report</button>
+
+        <br>
+        <button class="blue_button" onclick="location.href='/reg_student'">📘 Update Monthly Attendance</button>
+        <button class="blue_button" onclick="location.href='/reg_student'">🌐 Register New Student</button>
+    </div>  
+    
+    <div class="dash_footer">
+        <p>Designed and Developed by Random Variables. Website content is provided by the Department of Elementary Education (Phone: XXXXX-XXXXX Email : xxxxxxxxxxxx). The content on site is informative and neither the Department nor the NIC is responsible for any in-advertent errors. <br> © 2022 National Informatics Centre</p>
+    </div>
+</body>
+</html>
