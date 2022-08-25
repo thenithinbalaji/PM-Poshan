@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PM Poshan</title>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/main.css') }}">
-    <script src="{{url_for('static', filename='scripts/home.js')}}" defer></script>
+    <script src="{{url_for('static', filename='scripts/home/home.js')}}" defer></script>
 </head> 
 <body>
     <div class = "navbar">
@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <marquee scrollamount="7">Government School MGR Nagar, Chennai has been selected as the best school based on constant improvement in MDM and attendance. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; The plate image can be only uploaded from our android application. &emsp;&emsp;&emsp;&emsp;&emsp; Government School MGR Nagar, Chennai has been selected as the best school based on constant improvement in MDM and attendance. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; The plate image can be only uploaded from our android application.
+    <marquee scrollamount="7">The Cabinet Committee on Economic Affairs (CCEA) chaired by Prime Minister Narendra Modi on September 29, 2021, approved a new meal scheme known as 'Pradhan Mantri Poshan Shakti Nirman' scheme (PM Poshan Scheme) for government and government-aided schools for the next five years (from 2021-22 to 2025-26) with the financial outlay of Rs 1.31 trillion, and the existing 'Mid Day Meal' scheme will also be included in this programme. The central government will bear an additional cost of nearly Rs 45,000 crore on providing subsidised foodgrains from the food ministry over the years amounting to a total outlay of Rs 1.31 trillion. During 2020-21, the Centre invested more than Rs 24,400 crore in the scheme, including nearly Rs 11,500 crore on foodgrains.
     </marquee>
 
     <img src = "{{ url_for('static', filename='assets/thumb.jpg') }}" width="100%">
@@ -31,21 +31,21 @@
             <h3>Sign in to your account</h3>
             <br>
         
-            <select style="width: 12rem;" id="dashselect">
+            <select style="width: 12rem; border-radius:0.5rem; border-width: 1px; height: 1.2rem;" id="dashselect">
                 <option value="0">School</option>
                 <option value="1">Health Officer</option>
             </select>
             
             <br><br>
             <label>Email ID:</label>
-            <input type = "email" placeholder="abc@gmail.com"><br><br>
+            <input type = "email" placeholder="abc@gmail.com" style="border-radius:0.5rem; border-width: 1px; height: 1.2rem;"><br><br>
 
             <label>Password:</label>
-            <input type = "password" placeholder="password">
+            <input type = "password" placeholder="password" style="border-radius:0.5rem; border-width: 1px; height: 1.2rem;">
 
             <br><br>
             <button class="loginbtn" id="loginbtn">Login</button>
-            <button class="loginbtn">Forgot Password</button>
+            <button class="loginbtn" id="forgotpwdbtn">Forgot Password</button>
         </div>
     </div>  
     

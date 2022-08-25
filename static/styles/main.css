@@ -32,7 +32,7 @@
     text-transform:capitalize;
     font-weight: bold;
     font-size: 1.5rem;
-    width: 35rem;
+    width: 25rem;
     height: 10rem;
     background-color: #039be7;
     box-shadow: 0 3px 5px 1px grey;
@@ -71,25 +71,27 @@ a, a:hover, a:focus, a:active {
 }
 
 .loginfield{
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(245, 245, 245);
     width: 20%;
     padding: 2rem;
     border-radius: 3rem;
 }
 
 .school_dash_main{
+    margin: 6rem 2rem 3rem;
+    text-align: center;
+}
+
+.schooldetailsdiv{
+    margin-top: 2rem;
     display: flex;
-    margin-top: 6rem;
-    margin-left: 2rem;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .schooldetails{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    background-color: rgb(237, 237, 237);
-    border-radius: 2rem;
+    background-color: rgb(245, 245, 245);
+    width: 40%;
+    border-radius: 3rem;
+    text-align: center;
+    height: 10rem;
 }

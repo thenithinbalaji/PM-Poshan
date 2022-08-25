@@ -21,24 +21,32 @@
         </div>
     </div>
 
-    <div class = "main">
     <marquee scrollamount="7">Government School MGR Nagar, Chennai has been selected as the best school based on constant improvement in MDM and attendance. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; The plate image can be only uploaded from our android application. &emsp;&emsp;&emsp;&emsp;&emsp; Government School MGR Nagar, Chennai has been selected as the best school based on constant improvement in MDM and attendance. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; The plate image can be only uploaded from our android application.
     </marquee>
 
-    <div class="school_dash_main">
-        <div>
-            <button class="blue_button" onclick="location.href='/upload_menu'">Update Weekly Menu</button><br>
-            <button class="blue_button" onclick="location.href='/upload_hdata'">Update Health Data</button><br>
-            <button class="blue_button">Download Report</button>
-        </div>
+    <div class="schooldetailsdiv">
+        <div class = "schooldetails">
 
-        <div class="schooldetails">
-            <label style="font-size:2rem">Contact Number: </label>
-            <input type = "number" value="9848283023"><br><br>
+            <div>
+                <br>
+                <h2 style="display:inline-block;">Contact Details&nbsp;</h2>
+                <button onclick="document.getElementById('schoolinput').focus()">✏️</button>
+            </div>
 
-            <label style="font-size:2rem">School Incharge:</label>
+            <br>
+
+            <label>Contact Number: </label>
+            <input type = "number" value="9848283023" id="schoolinput"><br><br>
+
+            <label>School Incharge:</label>
             <input type = "text" value="Mr.Sharma">
         </div>
+    </div>
+
+    <div class="school_dash_main">
+        <button class="blue_button" onclick="location.href='/upload_menu'">Update Weekly Menu</button>
+        <button class="blue_button" onclick="location.href='/upload_hdata'">Update Health Data</button>
+        <button class="blue_button">Download Report</button>
     </div>
 
     <div class="dash_footer">

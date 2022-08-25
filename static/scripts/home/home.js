@@ -9,3 +9,7 @@ document.getElementById("loginbtn").onclick = function() {
         window.location.href = "performance"
     }  
 }
+
+document.getElementById("forgotpwdbtn").onclick = function() {
+    alert("\nPlease contact officer@pmposhan.com \nfor account related queries!")
+}
