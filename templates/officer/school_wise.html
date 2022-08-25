@@ -1,0 +1,29 @@
+{% extends "officer/base.html" %}
+
+{% block files %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/performance.css') }}">
+    <script defer src="{{ url_for('static', filename='scripts/performance.js') }}"></script>
+{% endblock %}
+
+{% block content %}    
+    <span class="title">{{ school }}, {{ state }}</span>
+    <div class="gridbox">
+        <div class="information">
+            <ul class="table">
+                {% for id, stud in data.students.items() %}
+                <li>
+                    <a href="{{ url_for('student_wise', school=school, state=state, student=id) }}" class="info-content">
+                        {{ stud.name }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="piechart" class="graph">
+        </div>
+        <div id="boys" class="graph">
+        </div>
+        <div id="girls" class="graph">
+        </div>
+    </div>
+{% endblock %}

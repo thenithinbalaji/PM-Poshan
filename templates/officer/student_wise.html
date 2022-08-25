@@ -1,0 +1,36 @@
+{% extends "officer/base.html" %}
+
+{% block files %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/performance.css') }}">
+    <script defer src="{{ url_for('static', filename='scripts/performance.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <span class="title">{{ data.name }}, {{ school }}, {{ state }}</span>
+    <div class="gridbox">
+        <div class="information" style="height: 60%">
+            <ul class="table" style="overflow-y: auto;">
+                <li style="justify-content: center;">
+                    <span class="info-content" style="padding: 0;">
+                        <span class="left col-name">Weight</span>
+                        <span class="right col-name">Height</span>
+                    </span>
+                </li>
+                {% for m, w, h in zip(range(1, msize+1), data.weight, data.height) %}
+                <li style="justify-content: center;">
+                    <span class="info-content" style="padding: 0;">
+                        <span class="left">{{ w }}</span>
+                        <span class="right">{{ h }}</span>
+                    </span>
+                </li>
+                {% endfor %} 
+            </ul>
+        </div>
+        <div id="piechart" class="graph">
+        </div>
+        <div id="boys" class="graph">
+        </div>
+        <div id="girls" class="graph">
+        </div>
+    </div>
+{% endblock %}

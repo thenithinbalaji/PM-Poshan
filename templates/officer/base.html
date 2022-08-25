@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <script src='https://cdn.plot.ly/plotly-2.14.0.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    {% block files %}
+    {% endblock %}
+</head>
+<body>
+    <div class="container">
+        {% block homebutton %}
+        <a href="{{ url_for('officer_home') }}" class="home">
+            <span style="font-size: 1.2rem; padding: 0;">
+                Home
+            </span>
+            <span class="material-symbols-outlined">
+                home
+            </span>
+        </a>
+        {% endblock %}
+
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

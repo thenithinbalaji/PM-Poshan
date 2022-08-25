@@ -1,0 +1,29 @@
+{% extends "officer/base.html" %}
+
+{% block files %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/performance.css') }}">
+    <script defer src="{{ url_for('static', filename='scripts/performance.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <span class="title">Overall Performance</span>
+    <div class="gridbox">
+        <div class="information">
+            <ul class="table">
+                {% for state, _ in list(data.items())[2:] %}
+                <li>
+                    <a href="{{ url_for('state_wise', state=state) }}" class="info-content">
+                        {{ state }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="piechart" class="graph">
+        </div>
+        <div id="boys" class="graph">
+        </div>
+        <div id="girls" class="graph">
+        </div>
+    </div>
+{% endblock %}
