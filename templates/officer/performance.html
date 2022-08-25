@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "officer/base.html" %}
 
 {% block files %}
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/performance.css') }}">
@@ -9,7 +9,7 @@
 {% block content %}
 
     <div class="content">
-        <input type="text" name="school" class="school-search" placeholder="Search School">
+        <input type="text" name="school" id="student-search" class="school-search" placeholder="Search School">
         <div class="card" id="total">
             <span class="num">1239</span>
             <span class="title">Total Students</span>
