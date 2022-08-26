@@ -9,6 +9,10 @@ document.getElementById("loginbtn").onclick = function() {
         window.location.href = "performance"
     }
 
+    else if(document.getElementById("dashselect").value == 2 && document.getElementById("email").value == "student@gmail.com" && document.getElementById("password").value == "pass"){
+        window.location.href = "student_dash"
+    }
+
     else{
         alert("\nInvalid Login Details")
     }

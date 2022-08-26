@@ -20,35 +20,38 @@
     <marquee scrollamount="7">The Cabinet Committee on Economic Affairs (CCEA) chaired by Prime Minister Narendra Modi on September 29, 2021, approved a new meal scheme known as 'Pradhan Mantri Poshan Shakti Nirman' scheme (PM Poshan Scheme) for government and government-aided schools for the next five years (from 2021-22 to 2025-26) with the financial outlay of Rs 1.31 trillion, and the existing 'Mid Day Meal' scheme will also be included in this programme. The central government will bear an additional cost of nearly Rs 45,000 crore on providing subsidised foodgrains from the food ministry over the years amounting to a total outlay of Rs 1.31 trillion. During 2020-21, the Centre invested more than Rs 24,400 crore in the scheme, including nearly Rs 11,500 crore on foodgrains.
     </marquee>
 
-    <img src = "{{ url_for('static', filename='assets/thumb.jpg') }}" width="100%">
+    <div style="display: flex; align-items: center; flex-direction: column; margin-bottom: 15rem;">    
+        <div>
+        <h2 style="margin-top: 5em;">How was your food today?</h2>
+    <p id = "current_date"></p><br>
+</div>
+<div class="star-rating" style="text-align:center;">
 
-    <div class = "dashbar1">
-        <h1 style="color: rgb(255, 123, 0);">Pradhan Mantri Poshan Shakti Nirman (PM POSHAN)</h1>
-    </div>
+    <input type="radio" id="5-stars" name="rating" value="5" />
+    <label for="5-stars" class="star">&#9733;</label>
+    <input type="radio" id="4-stars" name="rating" value="4" />
+    <label for="4-stars" class="star">&#9733;</label>
+    <input type="radio" id="3-stars" name="rating" value="3" />
+    <label for="3-stars" class="star">&#9733;</label>
+    <input type="radio" id="2-stars" name="rating" value="2" />
+    <label for="2-stars" class="star">&#9733;</label>
+    <input type="radio" id="1-star" name="rating" value="1" />
+    <label for="1-star" class="star">&#9733;</label>
+  </div>
+  
+  <div>
+    <br>
+    <h2>General Feedback</h2><br>
+  </div>
+  <div>
+    <textarea></textarea>
+  </div>
 
-    <div class = "dashbar2">
-        <div class = "loginfield">
-            <h3>Sign in to your account</h3>
-            <br>
-        
-            <select style="width: 12rem; border-radius:0.5rem; border-width: 1px; height: 1.2rem;" id="dashselect">
-                <option value="0">School</option>
-                <option value="1">Health Officer</option>
-                <option value="2">Student</option>
-            </select>
-            
-            <br><br>
-            <label>Email ID:</label>
-            <input id = "email" type = "email" placeholder="abc@gmail.com" style="border-radius:0.5rem; border-width: 1px; height: 1.2rem;"><br><br>
+  <br><button class="loginbtn">Submit Feedback</button>
+</div>
 
-            <label>Password:</label>
-            <input id = "password" type = "password" placeholder="password" style="border-radius:0.5rem; border-width: 1px; height: 1.2rem;">
 
-            <br><br>
-            <button class="loginbtn" id="loginbtn">Login</button>
-            <button class="loginbtn" id="forgotpwdbtn">Forgot Password</button>
-        </div>
-    </div>  
+
     
     <div class="dash_footer">
         <p>Designed and Developed by Random Variables. Website content is provided by the Department of Elementary Education (Phone: XXXXX-XXXXX Email : xxxxxxxxxxxx). The content on site is informative and neither the Department nor the NIC is responsible for any in-advertent errors. <br> © 2022 National Informatics Centre</p>

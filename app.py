@@ -9,6 +9,10 @@ app = Flask(__name__)
 def home():
     return render_template("school/home.html")
 
+@app.route('/student_dash')
+def student_dash():
+    return render_template('student/student.html')
+    
 @app.route('/get_graph_data')
 def get_graph_data():
     return send_file('static/data.csv')
