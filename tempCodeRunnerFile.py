@@ -1,1 +1,0 @@
-detailed_graphs

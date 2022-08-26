@@ -47,9 +47,6 @@ def school_wise_graph(school):
         }
     }
 
-
-
-
 @app.route('/school_dash')
 def school_dash():
     return render_template('school/school_dash.html')

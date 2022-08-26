@@ -9,7 +9,7 @@ document.getElementById("loginbtn").onclick = function() {
         window.location.href = "performance"
     }
 
-    else if(document.getElementById("dashselect").value == 2 && document.getElementById("email").value == "student@gmail.com" && document.getElementById("password").value == "pass"){
+    else if(document.getElementById("dashselect").value == 2 && document.getElementById("email").value == "1234" && document.getElementById("password").value == "03092002"){
         window.location.href = "student_dash"
     }
 
