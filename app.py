@@ -1,6 +1,7 @@
 from flask import Flask, render_template, send_file, request
 from data import data
 from stu_data import stu_data
+from classdata import classdata
 
 app = Flask(__name__)
 
@@ -11,6 +12,10 @@ def home():
 @app.route('/get_graph_data')
 def get_graph_data():
     return send_file('static/data.csv')
+
+@app.route('/get_class_data')
+def get_class_data():
+    return classdata
 
 @app.route('/performance/detailed')
 def detailed_graphs():

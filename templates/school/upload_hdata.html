@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PM Poshan</title>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/main.css') }}">
+    <script src="{{url_for('static', filename='scripts/school/upload_hdata.js')}}" defer></script>
 
 </head> 
 <body>
@@ -20,22 +21,108 @@
             <button class = "loginbtn">Logout</button>
         </div>
     </div>
-    <h1>Upload Health Data</h1>
-    <form action="/upload_hdata" method="post" target="_self">
-        <label for="aadharno">Aadhar Number:</label>
-        <input type = "number" id = "aadharno" name = "aadharno" min="100000000000" required>
+    <marquee>Body mass index is a value derived from the mass and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m², resulting from mass in kilograms and height in metres.</marquee>
+    
+    <div class="uploadhdata">
+        <h1>Upload Health Data</h1><br><br>
+        <form action="/upload_hdata" method="post" target="_self">
 
-        <br>
-        <label for="sheight">Student Height:</label>
-        <input name = "sheight" id = "sheight" type = "number" required min="5"> 
+            <label for="selectclass">Choose class:</label>
+            <select class="selectclass" id = "selectclass">
+                <option disabled selected value> </option>
+                <option value = 1>Class 1</option>
+                <option value = 2>Class 2</option>
+                <option value = 3>Class 3</option>
+                <option value = 4>Class 4</option>
+                <option value = 5>Class 5</option>
+                <option value = 6>Class 6</option>
+                <option value = 7>Class 7</option>
+                <option value = 8>Class 8</option>
+            </select>
 
-        <br>
-        <label for="sweight">Student Weight:</label>
-        <input name ="sweight" id = "sweight" type = "number" required min="5">
+            <br><br>
 
-        <br><br>
-        <button type="reset">Reset All Fields</button>
-        <button type="submit">Submit</button>
-    </form>
+            <table class="studenttable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type = "text" id = "sname1" name = "sname1" required>
+                        </td>
+
+                        <td>
+                            <input name = "sheight1" id = "sheight1" type = "number" required min="5"> 
+                        </td>
+
+                        <td>
+                            <input name ="sweight1" id = "sweight1" type = "number" required min="5">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type = "text" id = "sname2" name = "sname2" required>
+                        </td>
+
+                        <td>
+                            <input name = "sheight2" id = "sheight2" type = "number" required min="5"> 
+                        </td>
+
+                        <td>
+                            <input name ="sweight2" id = "sweight2" type = "number" required min="5">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type = "text" id = "sname3" name = "sname3" required>
+                        </td>
+
+                        <td>
+                            <input name = "sheight3" id = "sheight3" type = "number" required min="5"> 
+                        </td>
+
+                        <td>
+                            <input name ="sweight3" id = "sweight3" type = "number" required min="5">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type = "text" id = "sname4" name = "sname4" required>
+                        </td>
+
+                        <td>
+                            <input name = "sheight4" id = "sheight4" type = "number" required min="5"> 
+                        </td>
+
+                        <td>
+                            <input name ="sweight4" id = "sweight4" type = "number" required min="5">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type = "text" id = "sname5" name = "sname5" required>
+                        </td>
+
+                        <td>
+                            <input name = "sheight5" id = "sheight5" type = "number" required min="5"> 
+                        </td>
+
+                        <td>
+                            <input name ="sweight5" id = "sweight5" type = "number" required min="5">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+            <button type="reset" class="loginbtn">Reset All Fields</button>
+            <button type="submit" class="loginbtn">Submit</button>
+        </form>
+    </div>
 </body>
 </html>

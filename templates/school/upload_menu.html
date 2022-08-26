@@ -5,29 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PM Poshan</title>
-    <script src="{{url_for('static', filename='scripts/upload_menu.js')}}" defer></script>
+    <script src="{{url_for('static', filename='scripts/school/upload_menu.js')}}" defer></script>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/main.css') }}">
 
 </head> 
 <body>
     <div class = "navbar">
-    <div>
-      <img src = "{{ url_for('static', filename='assets/pmposhan.png') }}" height="45rem">
-      <img src = "{{ url_for('static', filename='assets/govlion.png') }}" height="45rem">
-      <img src = "{{ url_for('static', filename='assets/digitalindia.png') }}" height="45rem">
+      <div>
+        <img src = "{{ url_for('static', filename='assets/pmposhan.png') }}" height="45rem">
+        <img src = "{{ url_for('static', filename='assets/govlion.png') }}" height="45rem">
+        <img src = "{{ url_for('static', filename='assets/digitalindia.png') }}" height="45rem">
+      </div>
+
+      <div>
+        <button class = "loginbtn">Logout</button>
+      </div>
     </div>
 
-        <div>
-            <button class = "loginbtn">Logout</button>
-        </div>
-    </div>
-    <h1>What's the menu today?</h1>
-    <p id = "current_date"></p>
+    <div style="text-align:center; margin-top: 7rem;">
+    <h1>What's the menu for this week?</h1>
+    <p id = "current_date"></p><br>
     
     <form action="/upload_menu" target="_self" method="POST">
-    <label>Menu Items</label>
     <div id="menucontainer">
-        <section id="mainsection">
+        <section id="mainsection" style="text-align:center;display: flex;justify-content: center;">
           <table>
             <thead>
               <tr>
@@ -39,45 +40,212 @@
             <tbody>
               <tr>
                 <td>
+
                   <select id = "maindish" name = "maindish" required>
-                    <option value="Rice">Rice</option>
-                    <option value="Chappathi">Chappathi</option>
+                    <option value = "Rice">Rice</option>
+                    <option value="Vegetable Biriyani">Vegetable Biriyani</option>
+                    <option value="Black Bengal Gram Pulav">Black Bengal Gram Pulav</option>
+                    <option value="Tomato Rice">Tomato Rice</option>
                   </select>
+
+                  <input type = "number" id = "maindishqty" name="maindishqty" min = "1">
                 </td>
+
                 <td>
+
                   <select id = "sidedish" name = "sidedish">
                     <option value="None">None</option>
                     <option value="Dal">Dal</option>
                     <option value="Sambhar">Sambhar</option>
                     <option value="Rasam">Rasam</option>
                   </select>
+
+                  <input type = "number" id = "sidedishqty" name="sidedishqty" min="1">
+
                 </td>
+
                 <td>
+
                   <select id = "extras" name = "extras">
-                    <option value="None">None</option>
-                    <option value="Egg">Egg</option>
-                    <option value="Meat">Meat</option>
-                    <optgroup label="Fruits">
-                      <option value="Apple">Apple</option>
-                      <option value="Banana">Banana</option>
-                      <option value="Orange">Orange</option>
-                    </optgroup>
+                    <option value="Pepper Egg">Pepper Egg</option>
+                    <option value="Tomato Masala Egg">Tomato Masala Egg</option>
+                    <option value="Boiled Egg">Boiled Egg</option>
                   </select>
+
+                  <input type = "number" id = "extrasqty" name="extrasqty" min="1">
                 </td>
+
               </tr>
+
+              <tr>
+                <td>
+
+                  <select id = "maindish" name = "maindish" required>
+                    <option value = "Rice">Rice</option>
+                    <option value="Vegetable Biriyani">Vegetable Biriyani</option>
+                    <option value="Black Bengal Gram Pulav">Black Bengal Gram Pulav</option>
+                    <option value="Tomato Rice">Tomato Rice</option>
+                  </select>
+
+                  <input type = "number" id = "maindishqty" name="maindishqty" min = "1">
+                </td>
+
+                <td>
+
+                  <select id = "sidedish" name = "sidedish">
+                    <option value="None">None</option>
+                    <option value="Dal">Dal</option>
+                    <option value="Sambhar">Sambhar</option>
+                    <option value="Rasam">Rasam</option>
+                  </select>
+
+                  <input type = "number" id = "sidedishqty" name="sidedishqty" min="1">
+
+                </td>
+
+                <td>
+
+                  <select id = "extras" name = "extras">
+                    <option value="Pepper Egg">Pepper Egg</option>
+                    <option value="Tomato Masala Egg">Tomato Masala Egg</option>
+                    <option value="Boiled Egg">Boiled Egg</option>
+                  </select>
+
+                  <input type = "number" id = "extrasqty" name="extrasqty" min="1">
+                </td>
+
+              </tr>
+
+              <tr>
+                <td>
+
+                  <select id = "maindish" name = "maindish" required>
+                    <option value = "Rice">Rice</option>
+                    <option value="Vegetable Biriyani">Vegetable Biriyani</option>
+                    <option value="Black Bengal Gram Pulav">Black Bengal Gram Pulav</option>
+                    <option value="Tomato Rice">Tomato Rice</option>
+                  </select>
+
+                  <input type = "number" id = "maindishqty" name="maindishqty" min = "1">
+                </td>
+
+                <td>
+
+                  <select id = "sidedish" name = "sidedish">
+                    <option value="None">None</option>
+                    <option value="Dal">Dal</option>
+                    <option value="Sambhar">Sambhar</option>
+                    <option value="Rasam">Rasam</option>
+                  </select>
+
+                  <input type = "number" id = "sidedishqty" name="sidedishqty" min="1">
+
+                </td>
+
+                <td>
+
+                  <select id = "extras" name = "extras">
+                    <option value="Pepper Egg">Pepper Egg</option>
+                    <option value="Tomato Masala Egg">Tomato Masala Egg</option>
+                    <option value="Boiled Egg">Boiled Egg</option>
+                  </select>
+
+                  <input type = "number" id = "extrasqty" name="extrasqty" min="1">
+                </td>
+
+              </tr>
+
+              <tr>
+                <td>
+
+                  <select id = "maindish" name = "maindish" required>
+                    <option value = "Rice">Rice</option>
+                    <option value="Vegetable Biriyani">Vegetable Biriyani</option>
+                    <option value="Black Bengal Gram Pulav">Black Bengal Gram Pulav</option>
+                    <option value="Tomato Rice">Tomato Rice</option>
+                  </select>
+
+                  <input type = "number" id = "maindishqty" name="maindishqty" min = "1">
+                </td>
+
+                <td>
+
+                  <select id = "sidedish" name = "sidedish">
+                    <option value="None">None</option>
+                    <option value="Dal">Dal</option>
+                    <option value="Sambhar">Sambhar</option>
+                    <option value="Rasam">Rasam</option>
+                  </select>
+
+                  <input type = "number" id = "sidedishqty" name="sidedishqty" min="1">
+
+                </td>
+
+                <td>
+
+                  <select id = "extras" name = "extras">
+                    <option value="Pepper Egg">Pepper Egg</option>
+                    <option value="Tomato Masala Egg">Tomato Masala Egg</option>
+                    <option value="Boiled Egg">Boiled Egg</option>
+                  </select>
+
+                  <input type = "number" id = "extrasqty" name="extrasqty" min="1">
+                </td>
+
+              </tr>
+
+              <tr>
+                <td>
+
+                  <select id = "maindish" name = "maindish" required>
+                    <option value = "Rice">Rice</option>
+                    <option value="Vegetable Biriyani">Vegetable Biriyani</option>
+                    <option value="Black Bengal Gram Pulav">Black Bengal Gram Pulav</option>
+                    <option value="Tomato Rice">Tomato Rice</option>
+                  </select>
+
+                  <input type = "number" id = "maindishqty" name="maindishqty" min = "1">
+                </td>
+
+                <td>
+
+                  <select id = "sidedish" name = "sidedish">
+                    <option value="None">None</option>
+                    <option value="Dal">Dal</option>
+                    <option value="Sambhar">Sambhar</option>
+                    <option value="Rasam">Rasam</option>
+                  </select>
+
+                  <input type = "number" id = "sidedishqty" name="sidedishqty" min="1">
+
+                </td>
+
+                <td>
+
+                  <select id = "extras" name = "extras">
+                    <option value="Pepper Egg">Pepper Egg</option>
+                    <option value="Tomato Masala Egg">Tomato Masala Egg</option>
+                    <option value="Boiled Egg">Boiled Egg</option>
+                  </select>
+
+                  <input type = "number" id = "extrasqty" name="extrasqty" min="1">
+                </td>
+
+              </tr>
+
+              
             </tbody>
           </table>
       
         </section>
     </div>
-    <button type = "button" id="additembutton">Add New Item</button>
-    <button type = "button" id="removeitembutton">Remove Last Item</button>
+
     <br><br>
     <label for = "numberofstudents">Number of Students availed the meal:</label>
     <input id = "noofstudents" type="number" name = "numberofstudents" min="1" required placeholder="1">
     
     <br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" class="loginbtn">
   </form>
 
 

@@ -95,3 +95,24 @@ a, a:hover, a:focus, a:active {
     text-align: center;
     height: 10rem;
 }
+
+.uploadhdata {
+    margin-top: 7rem;
+    text-align: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+.studenttable{
+    margin-left: 12rem;
+}
