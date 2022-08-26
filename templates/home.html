@@ -7,6 +7,7 @@
     <title>PM Poshan</title>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/main.css') }}">
     <script src="{{url_for('static', filename='scripts/home/home.js')}}" defer></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head> 
 <body>
     <div class = "navbar">
@@ -14,6 +15,9 @@
             <img src = "{{ url_for('static', filename='assets/pmposhan.png') }}" height="45rem">
             <img src = "{{ url_for('static', filename='assets/govlion.png') }}" height="45rem">
             <img src = "{{ url_for('static', filename='assets/digitalindia.png') }}" height="45rem">
+        </div>
+        <div>
+            <div id="google_translate_element" style="margin:1em;"></div>
         </div>
     </div>
 
@@ -33,7 +37,7 @@
         
             <select style="width: 12rem; border-radius:0.5rem; border-width: 1px; height: 1.2rem;" id="dashselect">
                 <option value="0">School</option>
-                <option value="1">Health Officer</option>
+                <option value="1">District Officer</option>
                 <option value="2">Student</option>
             </select>
             
@@ -53,5 +57,12 @@
     <div class="dash_footer">
         <p>Designed and Developed by Random Variables. Website content is provided by the Department of Elementary Education (Phone: XXXXX-XXXXX Email : xxxxxxxxxxxx). The content on site is informative and neither the Department nor the NIC is responsible for any in-advertent errors. <br> © 2022 National Informatics Centre</p>
     </div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'hi,ta,te,kn,en,ml,mr,bn,gu', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    
 </body>
 </html>

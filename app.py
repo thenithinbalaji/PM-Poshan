@@ -9,9 +9,18 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
-@app.route('/student_dash')
+@app.route('/student_dash', methods = ['POST', 'GET'])
 def student_dash():
-    return render_template('student/student.html')
+    if request.method == 'POST':
+        print(request.form)
+        return render_template('student/student_success.html')
+    else:
+        return render_template('student/student.html')
+
+@app.route('/download')
+def downloadFile():
+    path = "static/assets/Correlations.pdf"
+    return send_file(path, as_attachment=True)
 
 @app.route('/get_graph_data')
 def get_graph_data():
