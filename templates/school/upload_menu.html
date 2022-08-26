@@ -7,7 +7,7 @@
     <title>PM Poshan</title>
     <script src="{{url_for('static', filename='scripts/school/upload_menu.js')}}" defer></script>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/main.css') }}">
-
+    
     <style>
       #menutable {
         font-family: Arial, Helvetica, sans-serif;
@@ -93,6 +93,8 @@
                   </select>
 
                   <input type = "number" id = "sidedishqty1" name="sidedishqty1" min="1" value="1">
+                  <input type = "number" id = "sidedishcal1" name = "sidedishcal1" readonly >
+                  <input type = "number" id = "sidedishpro1" name = "sidedishpro1" readonly >
 
                 </td>
 
@@ -105,11 +107,197 @@
                   </select>
 
                   <input type = "number" id = "extrasqty1" name="extrasqty1" min="1" value="1">
+                  <input type = "number" id = "extrascal1" name = "extrascal1" readonly >
+                  <input type = "number" id = "extraspro1" name = "extraspro1" readonly >
+
                 </td>
 
               </tr>
 
-              
+              <tr>
+                <td>
+
+                  <select id = "maindish2" name = "maindish2" required>
+                    <option value = "Rice">Rice</option>
+                    <option value="Vegetable Biriyani">Vegetable Biriyani</option>
+                    <option value="Black Bengal Gram Pulav">Black Bengal Gram Pulav</option>
+                    <option value="Tomato Rice">Tomato Rice</option>
+                  </select>
+
+                  <input type = "number" id = "maindishqty2" name="maindishqty2" min = "1" value="1">
+                  <input type = "number" id = "maindishcal2" name = "maindishcal2" readonly >
+                  <input type = "number" id = "maindishpro2" name = "maindishpro2" readonly >
+                </td>
+
+                <td>
+
+                  <select id = "sidedish2" name = "sidedish2">
+                    <option value="None">None</option>
+                    <option value="Dal">Dal</option>
+                    <option value="Sambhar">Sambhar</option>
+                    <option value="Rasam">Rasam</option>
+                  </select>
+
+                  <input type = "number" id = "sidedishqty2" name="sidedishqty2" min="1" value="1">
+                  <input type = "number" id = "sidedishcal2" name = "sidedishcal2" readonly >
+                  <input type = "number" id = "sidedishpro2" name = "sidedishpro2" readonly >
+
+                </td>
+
+                <td>
+
+                  <select id = "extras2" name = "extras2">
+                    <option value="Pepper Egg">Pepper Egg</option>
+                    <option value="Tomato Masala Egg">Tomato Masala Egg</option>
+                    <option value="Boiled Egg">Boiled Egg</option>
+                  </select>
+
+                  <input type = "number" id = "extrasqty2" name="extrasqty2" min="1" value="1">
+                  <input type = "number" id = "extrascal2" name = "extrascal2" readonly >
+                  <input type = "number" id = "extraspro2" name = "extraspro2" readonly >
+
+                </td>
+
+              </tr>
+
+              <tr>
+                <td>
+
+                  <select id = "maindish3" name = "maindish3" required>
+                    <option value = "Rice">Rice</option>
+                    <option value="Vegetable Biriyani">Vegetable Biriyani</option>
+                    <option value="Black Bengal Gram Pulav">Black Bengal Gram Pulav</option>
+                    <option value="Tomato Rice">Tomato Rice</option>
+                  </select>
+
+                  <input type = "number" id = "maindishqty3" name="maindishqty3" min = "1" value="1">
+                  <input type = "number" id = "maindishcal3" name = "maindishcal3" readonly >
+                  <input type = "number" id = "maindishpro3" name = "maindishpro3" readonly >
+                </td>
+
+                <td>
+
+                  <select id = "sidedish3" name = "sidedish3">
+                    <option value="None">None</option>
+                    <option value="Dal">Dal</option>
+                    <option value="Sambhar">Sambhar</option>
+                    <option value="Rasam">Rasam</option>
+                  </select>
+
+                  <input type = "number" id = "sidedishqty3" name="sidedishqty3" min="1" value="1">
+                  <input type = "number" id = "sidedishcal3" name = "sidedishcal3" readonly >
+                  <input type = "number" id = "sidedishpro3" name = "sidedishpro3" readonly >
+
+                </td>
+
+                <td>
+
+                  <select id = "extras3" name = "extras3">
+                    <option value="Pepper Egg">Pepper Egg</option>
+                    <option value="Tomato Masala Egg">Tomato Masala Egg</option>
+                    <option value="Boiled Egg">Boiled Egg</option>
+                  </select>
+
+                  <input type = "number" id = "extrasqty3" name="extrasqty3" min="1" value="1">
+                  <input type = "number" id = "extrascal3" name = "extrascal3" readonly >
+                  <input type = "number" id = "extraspro3" name = "extraspro3" readonly >
+
+                </td>
+
+              </tr>
+
+              <tr>
+                <td>
+
+                  <select id = "maindish4" name = "maindish4" required>
+                    <option value = "Rice">Rice</option>
+                    <option value="Vegetable Biriyani">Vegetable Biriyani</option>
+                    <option value="Black Bengal Gram Pulav">Black Bengal Gram Pulav</option>
+                    <option value="Tomato Rice">Tomato Rice</option>
+                  </select>
+
+                  <input type = "number" id = "maindishqty4" name="maindishqty4" min = "1" value="1">
+                  <input type = "number" id = "maindishcal4" name = "maindishcal4" readonly >
+                  <input type = "number" id = "maindishpro4" name = "maindishpro4" readonly >
+                </td>
+
+                <td>
+
+                  <select id = "sidedish4" name = "sidedish4">
+                    <option value="None">None</option>
+                    <option value="Dal">Dal</option>
+                    <option value="Sambhar">Sambhar</option>
+                    <option value="Rasam">Rasam</option>
+                  </select>
+
+                  <input type = "number" id = "sidedishqty4" name="sidedishqty4" min="1" value="1">
+                  <input type = "number" id = "sidedishcal4" name = "sidedishcal4" readonly >
+                  <input type = "number" id = "sidedishpro4" name = "sidedishpro4" readonly >
+
+                </td>
+
+                <td>
+
+                  <select id = "extras4" name = "extras4">
+                    <option value="Pepper Egg">Pepper Egg</option>
+                    <option value="Tomato Masala Egg">Tomato Masala Egg</option>
+                    <option value="Boiled Egg">Boiled Egg</option>
+                  </select>
+
+                  <input type = "number" id = "extrasqty4" name="extrasqty4" min="1" value="1">
+                  <input type = "number" id = "extrascal4" name = "extrascal4" readonly >
+                  <input type = "number" id = "extraspro4" name = "extraspro4" readonly >
+
+                </td>
+
+              </tr>
+
+              <tr>
+                <td>
+
+                  <select id = "maindish5" name = "maindish5" required>
+                    <option value = "Rice">Rice</option>
+                    <option value="Vegetable Biriyani">Vegetable Biriyani</option>
+                    <option value="Black Bengal Gram Pulav">Black Bengal Gram Pulav</option>
+                    <option value="Tomato Rice">Tomato Rice</option>
+                  </select>
+
+                  <input type = "number" id = "maindishqty5" name="maindishqty5" min = "1" value="1">
+                  <input type = "number" id = "maindishcal5" name = "maindishcal5" readonly >
+                  <input type = "number" id = "maindishpro5" name = "maindishpro5" readonly >
+                </td>
+
+                <td>
+
+                  <select id = "sidedish5" name = "sidedish5">
+                    <option value="None">None</option>
+                    <option value="Dal">Dal</option>
+                    <option value="Sambhar">Sambhar</option>
+                    <option value="Rasam">Rasam</option>
+                  </select>
+
+                  <input type = "number" id = "sidedishqty5" name="sidedishqty5" min="1" value="1">
+                  <input type = "number" id = "sidedishcal5" name = "sidedishcal5" readonly >
+                  <input type = "number" id = "sidedishpro5" name = "sidedishpro5" readonly >
+
+                </td>
+
+                <td>
+
+                  <select id = "extras5" name = "extras5">
+                    <option value="Pepper Egg">Pepper Egg</option>
+                    <option value="Tomato Masala Egg">Tomato Masala Egg</option>
+                    <option value="Boiled Egg">Boiled Egg</option>
+                  </select>
+
+                  <input type = "number" id = "extrasqty5" name="extrasqty5" min="1" value="1">
+                  <input type = "number" id = "extrascal5" name = "extrascal5" readonly >
+                  <input type = "number" id = "extraspro5" name = "extraspro5" readonly >
+
+                </td>
+
+              </tr>
+
 
               
             </tbody>
@@ -125,6 +313,10 @@
     <br>
     <input type="submit" value="Submit" class="loginbtn">
   </form>
+
+  <!-- <div style="text-align: center;">
+    <button onclick="checkStatus()" class="loginbtn">Check Status</button>
+</div> -->
 
 
 </body>

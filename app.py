@@ -17,6 +17,10 @@ def student_dash():
     else:
         return render_template('student/student.html')
 
+@app.route('/embed')
+def embed():
+    return render_template("officer/embed.html")
+
 @app.route('/download')
 def downloadFile():
     path = "static/assets/Correlations.pdf"

@@ -13,6 +13,10 @@ document.getElementById("loginbtn").onclick = function() {
         window.location.href = "student_dash"
     }
 
+    else if(document.getElementById("dashselect").value == 3 && document.getElementById("email").value == "natadmin@gmail.com" && document.getElementById("password").value == "pass"){
+        window.location.href = "performance/detailed"
+    }
+
     else{
         alert("\nInvalid Login Details")
     }
