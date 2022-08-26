@@ -3,10 +3,10 @@ from data import data
 from stu_data import stu_data
 
 app = Flask(__name__)
+
 @app.route('/')
 def home():
     return render_template("school/home.html")
-
 
 @app.route('/get_graph_data')
 def get_graph_data():
