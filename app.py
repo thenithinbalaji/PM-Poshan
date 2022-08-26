@@ -1,13 +1,45 @@
 from flask import Flask, render_template, send_file, request
+from data import data
+from stu_data import stu_data
 
 app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template("school/home.html")
 
+
 @app.route('/get_graph_data')
 def get_graph_data():
     return send_file('static/data.csv')
+
+@app.route('/performance/detailed')
+def detailed_graphs():
+    return render_template('officer/detailed.html')
+
+@app.route('/performance/get_stu_data')
+def get_stu_data():
+    return stu_data
+
+@app.route('/performance/<school>')
+def school_wise(school):
+    return render_template('officer/school.html', school=school)
+
+@app.route('/performance/<school>/get_school_graph_data')
+def school_wise_graph(school):
+    data = stu_data[school]
+    return {
+        "girls": {
+            "height": data[0],
+            "weight": data[1],
+        },
+        "boys": {
+            "height": data[2],
+            "weight": data[3]
+        }
+    }
+
+
+
 
 @app.route('/school_dash')
 def school_dash():
