@@ -7,12 +7,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template("school/home.html")
+    return render_template("home.html")
 
 @app.route('/student_dash')
 def student_dash():
     return render_template('student/student.html')
-    
+
 @app.route('/get_graph_data')
 def get_graph_data():
     return send_file('static/data.csv')
@@ -53,6 +53,10 @@ def school_wise_graph(school):
 @app.route('/school_dash')
 def school_dash():
     return render_template('school/school_dash.html')
+
+@app.route('/public')
+def public():
+    return render_template('officer/detailed.html')
 
 @app.route('/performance')
 def performance():
