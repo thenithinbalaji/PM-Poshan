@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PM Poshan</title>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/main.css') }}">
+    <script src="{{url_for('static', filename='scripts/school/upload_menu.js')}}" defer></script>
 </head>
 <body>
     <div class = "navbar">
@@ -19,16 +20,23 @@
             <button class = "loginbtn">Logout</button>
         </div>
     </div> 
-    <h1>Upload Attendance</h1>
-    <form action="/upload_attendance" method="post" target="_self">
-        <label for="adminno">Admission Number:</label>
-        <input type = "number" id = "adminno" name = "adminno" required min="1000">
 
-        
+    <div style="text-align:center; margin:16rem 0 14rem">
+        <h1>Upload Attendance</h1><br>
+        <p id = "current_date"></p><br>
+        <form action="/upload_attendance" method="post" target="_self">
+            <label for="adminno">Admission Number:</label>
+            <input type = "number" id = "adminno" name = "adminno" required min="1000">
 
-        <br><br>
-        <button type="reset">Reset All Fields</button>
-        <button type="submit">Submit</button>
-    </form>
+            <br><br>
+            <button type="reset" class="loginbtn">Reset All Fields</button>
+            <button type="submit" class="loginbtn">Submit</button>
+        </form>
+    
+    </div>
+
+    <div class="dash_footer">
+        <p>Designed and Developed by Random Variables. Website content is provided by the Department of Elementary Education (Phone: XXXXX-XXXXX Email : xxxxxxxxxxxx). The content on site is informative and neither the Department nor the NIC is responsible for any in-advertent errors. <br> © 2022 National Informatics Centre</p>
+    </div>
 </body>
 </html>

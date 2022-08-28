@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PM Poshan</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/main.css') }}">
     <style>
         a {
             width: 4rem;
@@ -28,7 +29,7 @@
 </head>
 <body>
 
-    <a href="{{ url_for('performance') }}">Home</a>
+    <a href="{{ url_for('performance') }}" class="loginbtn">District View</a>
     <div class='tableauPlaceholder' id='viz1661503997352' style='position: relative'><noscript><a href='#'><img
                     alt='Correlation Analysis '
                     src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SI&#47;SIH2022-Correlation&#47;CorrelationAnalysis&#47;1_rss.png'

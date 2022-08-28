@@ -1,3 +1,6 @@
+// hard coded passwords for login page
+// change it to preferred DB 
+
 document.getElementById("loginbtn").onclick = function() {
     console.log(document.getElementById("dashselect").value)
 
@@ -9,6 +12,7 @@ document.getElementById("loginbtn").onclick = function() {
         window.location.href = "performance"
     }
 
+    //student has admission number and dob as password for simplicity 
     else if(document.getElementById("dashselect").value == 2 && document.getElementById("email").value == "1234" && document.getElementById("password").value == "03092002"){
         window.location.href = "student_dash"
     }

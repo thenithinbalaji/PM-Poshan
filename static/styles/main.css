@@ -113,12 +113,6 @@ table {
     padding: 8px;
   }
   
-.studenttable{
-    margin-left: 12rem;
-}
-
-/* component */
-
 .star-rating {
     border:solid 1px #ccc;
     display:flex;
