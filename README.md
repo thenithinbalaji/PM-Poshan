@@ -23,3 +23,24 @@ Recommended to create virtual environment and install modules from requirements.
 ```
 pip install -r requirements.txt
 ```
+
+## Test Login Creds
+
+```
+School Incharge
+---------------
+Username: school@gmail.com
+Password: pass 
+```
+```
+School Student
+--------------
+Username: 1234
+Password: 03092002
+```
+```
+District/State Officer/National Officer
+----------------------
+Username: admin@gmail.com or natadmin@gmail.com
+Password: pass
+```
